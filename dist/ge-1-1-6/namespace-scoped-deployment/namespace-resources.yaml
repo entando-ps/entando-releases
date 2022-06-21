@@ -52,7 +52,7 @@ data:
   entando-de-app-wildfly-6-3: >-
     {"version":"6.3.68-fix.3-ENG-3332-PR-335","executable-type":"jvm","registry":"registry.hub.docker.com","organization":"entando","repository":"entando-de-app-wildfly"}
   entando-de-app-wildfly-6-4: >-
-    {"version":"6.5.0","executable-type":"jvm","registry":"registry.hub.docker.com","organization":"entando","repository":"entando-de-app-wildfly"}
+    {"version":"6.5.0-pst","executable-type":"jvm","registry":"registry.hub.docker.com","organization":"entandodemo","repository":"entando-de-app-wildfly"}
   entando-k8s-app-controller: >-
     {"version":"7.0.2","executable-type":"jvm","registry":"registry.hub.docker.com","organization":"entando"}
   entando-k8s-app-plugin-link-controller: >-
@@ -68,11 +68,11 @@ data:
   entando-k8s-service: >-
     {"version":"7.0.2","executable-type":"jvm","registry":"registry.hub.docker.com","organization":"entando"}
   entando-keycloak: >-
-    {"version":"6.3.9","executable-type":"","registry":"registry.hub.docker.com","organization":"entando"}
+    {"version":"7.0.1","executable-type":"","registry":"registry.hub.docker.com","organization":"entando"}
   entando-process-driven-plugin: >-
     {"version":"6.0.50-fix.1","executable-type":"jvm","registry":"registry.hub.docker.com","organization":"entando"}
   entando-redhat-sso: >-
-    {"version":"6.3.9","executable-type":"","registry":"registry.hub.docker.com","organization":"entando"}
+    {"version":"7.0.0","executable-type":"","registry":"registry.hub.docker.com","organization":"entando"}
   mysql-80-centos7: >-
     {"version":"20210423-5849b27","executable-type":"jvm","registry":"registry.hub.docker.com","organization":"centos","repository":"mysql-80-centos7"}
   postgresql-12-centos7: >-
@@ -280,12 +280,10 @@ spec:
         deployment: entando-operator
     spec:
       serviceAccountName: entando-operator
-      volumes:
       containers:
         - name: operator
           image: "entando/entando-k8s-controller-coordinator:7.0.3"
           imagePullPolicy: Always
-          volumeMounts:
           env:
             - name: ENTANDO_K8S_OPERATOR_DEPLOYMENT_TYPE
               value: 'helm'
