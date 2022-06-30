@@ -245,20 +245,6 @@ subjects:
   - kind: ServiceAccount
     name: entando-plugin
 ---
-# Source: entando-k8s-operator-bundle/charts/operator/templates/entando-k8s-service-service.yaml
-kind: Service
-apiVersion: v1
-metadata:
-  name: entando-k8s-service
-spec:
-  ports:
-    - name: k8s-svc-port
-      protocol: TCP
-      port: 8084
-      targetPort: 8084
-  selector:
-    deployment: entando-k8s-service
----
 # Source: entando-k8s-operator-bundle/templates/entando-k8s-service-service.yaml
 kind: Service
 apiVersion: v1
