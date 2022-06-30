@@ -27,6 +27,15 @@ metadata:
   name: entando-empty-tls-secret
 type: kubernetes.io/tls
 ---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: entando-operator-config
+data:
+  entando.pod.completion.timeout.seconds: "2000"
+  entando.pod.readiness.timeout.seconds: "2000"
+  entando.tls.secret.name: entando-empty-tls-secret
+---
 # Source: entando-k8s-operator-bundle/charts/operator/templates/docker-image-info-configmap.yaml
 apiVersion: v1
 kind: ConfigMap
