@@ -27,7 +27,7 @@ data:
   entando-de-app-eap: >-
     {"version":"6.5.0","executable-type":"jvm","registry":"docker.io","organization":"entando"}
   entando-de-app-wildfly: >-
-    {"version":"6.5.08","executable-type":"jvm","registry":"docker.io","organization":"entando"}
+    {"version":"6.5.0","executable-type":"jvm","registry":"docker.io","organization":"entando"}
   entando-k8s-app-controller: >-
     {"version":"6.3.12","executable-type":"jvm","registry":"docker.io","organization":"entando"}
   entando-k8s-app-plugin-link-controller: >-
